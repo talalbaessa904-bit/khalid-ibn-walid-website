@@ -1,0 +1,366 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* الترويسة */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+header .subtitle {
+    font-size: 1.5em;
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* القائمة الملاحية */
+nav {
+    background-color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 18px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    border-bottom: 3px solid #ffd700;
+}
+
+nav ul li a.active {
+    background-color: #1e3c72;
+    border-bottom: 3px solid #ffd700;
+}
+
+/* المحتوى الرئيسي */
+main {
+    background-color: white;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* صورة البطل */
+.hero-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text h2 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* المحتوى */
+.content h2 {
+    color: #1e3c72;
+    font-size: 2.2em;
+    margin: 30px 0 20px 0;
+    border-right: 5px solid #ffd700;
+    padding-right: 15px;
+}
+
+.content h3 {
+    color: #2a5298;
+    font-size: 1.8em;
+    margin: 25px 0 15px 0;
+    border-right: 4px solid #34495e;
+    padding-right: 12px;
+}
+
+.content h4 {
+    color: #34495e;
+    font-size: 1.5em;
+    margin: 20px 0 10px 0;
+}
+
+.content p {
+    font-size: 1.15em;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 2;
+}
+
+.content ul {
+    margin: 20px 0;
+    padding-right: 40px;
+}
+
+.content ul li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.content strong {
+    color: #1e3c72;
+    font-weight: bold;
+}
+
+.content em {
+    color: #555;
+    font-style: italic;
+}
+
+/* صندوق المعلومات */
+.info-box {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.info-box table {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.info-box table tr:last-child {
+    border-bottom: none;
+}
+
+.info-box table td {
+    padding: 15px 20px;
+    font-size: 1.1em;
+}
+
+.info-box table td:first-child {
+    background-color: #f8f9fa;
+    width: 35%;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.info-box p {
+    color: white;
+    font-size: 1.15em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* بطاقات المعارك */
+.battle-card {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    border-right: 5px solid #0097a7;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.battle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.battle-card h4 {
+    color: #00695c;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0097a7;
+    padding-bottom: 10px;
+}
+
+.battle-card p {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.battle-card strong {
+    color: #004d40;
+}
+
+/* صناديق الاقتباسات */
+.quote-box {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    border-right: 5px solid #e17055;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+.quote-box p {
+    font-size: 1.2em;
+    color: #2d3436;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.quote-box .quote-author {
+    text-align: left;
+    font-weight: bold;
+    color: #d63031;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+/* التذييل */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .student-info {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+footer .student-info p {
+    font-size: 1.2em;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 1em;
+    color: #bdc3c7;
+    margin-top: 10px;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header .subtitle {
+        font-size: 1.2em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #34495e;
+    }
+    
+    main {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .content h2 {
+        font-size: 1.8em;
+    }
+    
+    .content h3 {
+        font-size: 1.5em;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+    
+    .battle-card h4 {
+        font-size: 1.5em;
+    }
+}
+
+/* تحسينات إضافية */
+a {
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2a5298;
+    text-decoration: underline;
+}
+
+::selection {
+    background-color: #ffd700;
+    color: #1e3c72;
+}
+
+/* تأثيرات التمرير السلس */
+html {
+    scroll-behavior: smooth;
+}
