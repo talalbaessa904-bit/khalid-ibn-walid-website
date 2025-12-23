@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التواصل - خالد بن الوليد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>خالد بن الوليد</h1>
+            <p class="subtitle">سيف الله المسلول</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li><a href="battles.html">المعارك والفتوحات</a></li>
+                <li><a href="legacy.html">إرثه ووفاته</a></li>
+                <li><a href="contact.html" class="active">نموذج التواصل</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="content">
+            <h2>نموذج التواصل والآراء</h2>
+            <p>
+                نرحب بآرائك واقتراحاتك حول هذا الموقع الإلكتروني. يمكنك ملء النموذج أدناه لإرسال رسالتك إلينا.
+            </p>
+
+            <div class="form-container">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف (اختياري)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="school">المدرسة (اختياري)</label>
+                        <input type="text" id="school" name="school" placeholder="أدخل اسم مدرستك">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">الموضوع *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">اختر الموضوع</option>
+                            <option value="feedback">ملاحظات وآراء</option>
+                            <option value="suggestion">اقتراحات</option>
+                            <option value="question">أسئلة</option>
+                            <option value="correction">تصحيحات</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">الرسالة *</label>
+                        <textarea id="message" name="message" required placeholder="أدخل رسالتك هنا..." rows="6"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">أوافق على سياسة الخصوصية *</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <p>✓ شكراً لك! تم استقبال رسالتك بنجاح.</p>
+                </div>
+            </div>
+
+            <h2>معلومات إضافية</h2>
+            <div class="info-box">
+                <h3>عن هذا الموقع</h3>
+                <p>
+                    هذا الموقع الإلكتروني تم إنشاؤه كمشروع تعليمي عن الصحابي الجليل خالد بن الوليد، سيف الله المسلول. يهدف الموقع إلى نشر المعرفة عن حياته وإنجازاته العسكرية وإرثه الحضاري.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>معلومات المشروع</h3>
+                <table>
+                    <tr>
+                        <td><strong>إعداد الطالب:</strong></td>
+                        <td>طلال سلطان باعيسى</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الصف:</strong></td>
+                        <td>1/4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>المعلم:</strong></td>
+                        <td>إبراهيم دغريري</td>
+                    </tr>
+                    <tr>
+                        <td><strong>تاريخ الإنشاء:</strong></td>
+                        <td>2024</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="student-info">
+                <p><strong>إعداد الطالب:</strong> طلال سلطان باعيسى</p>
+                <p><strong>الصف:</strong> 1/4</p>
+                <p><strong>المعلم:</strong> إبراهيم دغريري</p>
+            </div>
+            <p class="copyright">© 2024 - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const school = document.getElementById('school').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Log the data (in a real application, this would be sent to a server)
+            console.log({
+                name: name,
+                email: email,
+                phone: phone,
+                school: school,
+                subject: subject,
+                message: message,
+                timestamp: new Date().toLocaleString('ar-SA')
+            });
+            
+            // Show success message
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                document.getElementById('contactForm').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
